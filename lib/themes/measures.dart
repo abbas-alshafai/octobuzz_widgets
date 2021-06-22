@@ -40,7 +40,8 @@ class SizeUtils{
   // Screen Breakpoints
   static const int xsBreakPoint = 359;
   static const int smBreakPoint = 599;
-  static const int mdBreakPoint = 1439;
+  // static const int mdBreakPoint = 1439;
+  static const int mdBreakPoint = 999;
   static const int lgBreakPoint = 1919;
   static const int extraLarge = 1919;
 

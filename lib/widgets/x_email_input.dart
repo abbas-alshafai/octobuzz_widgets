@@ -34,6 +34,4 @@ class XEmailInput extends XTextFormField{
       } ,
       
   );
-
-
 }

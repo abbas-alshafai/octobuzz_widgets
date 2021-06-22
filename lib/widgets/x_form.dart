@@ -16,22 +16,4 @@ class XForm extends EngForm {
             : children,
       )
     );
-
-// TODO remove
-//  static _getSpacedList(List<Widget> l) {
-//
-//    if(l == null || l.length < 2)
-//      return l;
-//
-//
-//    List<Widget> children = [];
-//    children.add(l.elementAt(0));
-//
-//    for(int i = 1 ; i < l.length; i++){
-//      children.add(SizedBox(height: vSpace,));
-//      children.add(l.elementAt(i));
-//    }
-//
-//    return children;
-//  }
 }

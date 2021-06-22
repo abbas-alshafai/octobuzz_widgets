@@ -19,6 +19,7 @@ class XResponsiveLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return LayoutBuilder(
       builder: (context, dimensions){
         return SizeUtils.resize<Widget>(

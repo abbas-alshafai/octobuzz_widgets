@@ -1,103 +1,78 @@
-import '../themes/measures.dart';
-
-import '../utils/utils.dart';
-
-import '../themes/theme_factory.dart';
+import 'package:engine_utils/utils/string_utils.dart';
 import '../widgets/x_appbar.dart';
-import '../widgets/x_text.dart';
 import 'package:flutter/material.dart';
 
-import 'x_icon_button.dart';
 
-class XAppBarSolid extends XAppBar{
+class XAppBarSolid extends StatelessWidget implements PreferredSizeWidget {
+
+  final Widget? title;
+  final Widget? leading;
+  final List<Widget>? actions;
+  final IconData? actionIconData;
+  final Color? backgroundColor;
+  final double? elevation;
+  final TextTheme? textTheme;
+  final bool? centerTitle;
+  final double? titleSpacing;
+  final IconThemeData? iconTheme;
+  final String? titleText;
+  final Color? titleColor;
+  final bool automaticallyImplyLeading;
+  final VoidCallback? actionOnPressed;
+  final Widget? flexibleSpace;
+  final PreferredSizeWidget? bottom;
+  final double? toolbarHeight;
+  @override
+  final Size preferredSize;
+
   XAppBarSolid({
-    Widget? title,
-    Widget? leading,
-    List<Widget>? actions,
-    IconData? actionIconData,
-    Color? backgroundColor,
-    double? elevation,
-    TextTheme? textTheme,
-    bool? centerTitle,
-    double? titleSpacing,
-    IconThemeData? iconTheme,
-    String? titleText,
-    VoidCallback? actionOnPressed,
-    Widget? flexibleSpace,
-    PreferredSizeWidget? bottom,
-  })
-      : super (
+    this.title,
+    this.leading,
+    this.actions,
+    this.actionIconData,
+    this.backgroundColor,
+    this.elevation,
+    this.textTheme,
+    this.centerTitle,
+    this.titleSpacing,
+    this.iconTheme,
+    this.titleText,
+    this.titleColor,
+    this.automaticallyImplyLeading = true,
+    this.actionOnPressed,
+    this.flexibleSpace,
+    this.bottom,
+    this.toolbarHeight,
+    Key? key,
+  })   : preferredSize = Size.fromHeight(toolbarHeight ??
+      kToolbarHeight + (bottom?.preferredSize.height ?? 0.0)),
+        super(key: key);
 
 
-    iconTheme: iconTheme ?? IconThemeData(
-      color: ThemeFactory.instance.getTheme().themeData.primaryColor
-          .withOpacity(OpacityRatios.normal)
-    ),
-    title: Utils.shrinkIfEmpty(
-      primaryWidget: title,
-      text: titleText,
-      // altWidget: XText(
-      //   titleText!,
-      //   //      color: ThemeFactory.instance.getTheme().secondary,
-      //   color: Colors.black87, // TODO
-      //   // style: GoogleFonts.comfortaa( // TODO
-      //   //   //        color: Colors.white,
-      //   //   //        fontSize: 14,
-      //   //   //        fontWeight: FontWeight.w400,
-      //   //   //        textStyle: Theme.of(context).textTheme.display1
-      //   // )
-      // ),
-    ),
+  @override
+  Widget build(BuildContext context) {
+    return XAppBar(
+      title: title ??
+          (StringUtils.instance.isBlank(titleText)
+              ? SizedBox.shrink()
+              : Text(
+            titleText!,
+            style: TextStyle().copyWith(
+                color: Theme.of(context).colorScheme.onPrimary),
+          )),
+      leading: leading,
+      actions: actions,
+      backgroundColor: backgroundColor ?? Theme.of(context).primaryColor,
+      elevation: elevation,
+      iconTheme: iconTheme,
+      textTheme: textTheme,
+      centerTitle: centerTitle,
+      titleSpacing: titleSpacing,
+      automaticallyImplyLeading: automaticallyImplyLeading,
+      flexibleSpace: flexibleSpace,
+      bottom: bottom,
 
-
-
-
-
-    leading: leading ?? SizedBox.shrink(),
-    actions:
-      /*
-      actionIconData != null
-        ? <Widget>[
-          XIconButton(
-
-            iconData: actionIconData,
-              //      color: ThemeFactory.instance.getTheme().secondary,
-              color: Colors.white,
-            onPressed: actionOnPressed
-          ),
-
-        ]
-        :
-
-       */
-        actions,
-    elevation: elevation ?? 4,
-    textTheme: textTheme,
-    centerTitle: centerTitle ?? true,
-    titleSpacing: titleSpacing ?? NavigationToolbar.kMiddleSpacing,
-    bottom: bottom,
-
-
-    flexibleSpace: backgroundColor != null
-        ? null
-        : (flexibleSpace ?? Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-
-                colors: [
-                  // Colors.orange,
-                  // Colors.amber,
-                  // Colors.blueGrey,
-                  ThemeFactory.instance.getTheme().gradientOne,
-                  ThemeFactory.instance.getTheme().gradientTwo
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-            )
-          )
-          )
-    ,
-
-  );
+    );
+  }
+  
 }

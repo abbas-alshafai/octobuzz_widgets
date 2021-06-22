@@ -5,7 +5,7 @@ import '../utils/utils.dart';
 import 'x_bottom_container.dart';
 import 'x_text.dart';
 
-class XBottomButton extends StatelessWidget {
+class XBigButton extends StatelessWidget {
 
   final String? text;
   final VoidCallback onPressed;
@@ -16,7 +16,7 @@ class XBottomButton extends StatelessWidget {
 
   
 
-  const XBottomButton({
+  const XBigButton({
     Key? key,
     this.child,
     this.text,
@@ -30,19 +30,20 @@ class XBottomButton extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return XBottomContainer(
-        child: SizedBox(
-          width: 200,
-          child: ElevatedButton(
-            child: Utils.shrinkIfEmpty(
-              primaryWidget: child,
-              text: text,
-              textWidget: XText( text ?? StringUtils.empty,
-                  color: Theme.of(context).colorScheme.onPrimary
-              ),
+      child: SizedBox(
+        width: 200,
+        child: ElevatedButton(
+          child: Utils.shrinkIfEmpty(
+            primaryWidget: child,
+            text: text,
+            textWidget: XText( text ?? StringUtils.empty,
+                color: Theme.of(context).colorScheme.onPrimary
             ),
-            onPressed: onPressed,
           ),
+          onPressed: onPressed,
         ),
+      ),
     );
+
   }
 }

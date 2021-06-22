@@ -37,6 +37,13 @@ dependencies:
   expandable: ^5.0.1
 
 
+
+
+# ------ Text ------
+  auto_size_text: ^3.0.0-nullsafety.0
+  auto_size_text_field: ^1.0.0-nullsafety.1
+
+
 # ------ Engines ------
   engine_widgets:
     git:
@@ -46,10 +53,13 @@ dependencies:
     git:
       ref: master
       url: git@bitbucket.org:firebuzz_engine/engine_utils.git
-#  engine_common_dto:
-#    git:
-#      ref: master
-#      url: git@bitbucket.org:firebuzz_engine/engine_common_dto.git
+
+  # ------ Local Engines ------
+#  engine_widgets:
+#    path: ../../engine/engine_widgets
+#  engine_utils:
+#    path: ../../engine/engine_utils
+
 
 dev_dependencies:
   flutter_test:

@@ -101,29 +101,33 @@ class XTextFormField extends StatelessWidget {
       maxLines: maxLines,
       onSaved: onSaved,
       style: textStyle,
+
+
+
       decoration: InputDecoration(
         hintText: hintText,
         // fillColor: ThemeFactory.instance.getTheme().frontBackgroundColor,
         filled: true,
         border: border,
         errorBorder: errorBorder,
-        contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+        contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
 
-        enabledBorder: OutlineInputBorder(
-          borderSide:
-          BorderSide(
-            // color: ThemeFactory.instance.getTheme().secondary,
-              width: outlineInputWidth
-          ),
-        ),
-
-        focusedBorder: focusedBorder ?? OutlineInputBorder(
-          borderSide: BorderSide(
-              color: ThemeFactory.instance.getTheme().themeData.primaryColor,
-              width: outlineInputWidth
-          ),
-        ),
+        // enabledBorder: OutlineInputBorder(
+        //   borderSide:
+        //   BorderSide(
+        //     // color: ThemeFactory.instance.getTheme().secondary,
+        //       width: outlineInputWidth
+        //   ),
+        // ),
+        //
+        // focusedBorder: focusedBorder ?? OutlineInputBorder(
+        //   borderSide: BorderSide(
+        //       color: ThemeFactory.instance.getTheme().themeData.primaryColor,
+        //       width: outlineInputWidth
+        //   ),
+        // ),
       ),
+      
     );
   }
 }
