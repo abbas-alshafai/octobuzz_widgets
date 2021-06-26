@@ -37,7 +37,7 @@ class XElevatedButton extends StatelessWidget {
 
     TextStyle textStyle = textColor != null
         ? Theme.of(context).textTheme.button!.copyWith( color: textColor )
-        : Theme.of(context).textTheme.button!;
+        : TextStyle().copyWith(color: Theme.of(context).colorScheme.onPrimary); // TODO reverse to: Theme.of(context).textTheme.button!;
 
 
     return ElevatedButton(
@@ -57,7 +57,7 @@ class XElevatedButton extends StatelessWidget {
       child: Utils.shrinkIfEmpty(
         primaryWidget: child,
         text: text,
-        textWidget: XText(text ?? StringUtils.empty,
+        textWidget: Text(text ?? StringUtils.empty,
             style: textStyle
         )
       ),

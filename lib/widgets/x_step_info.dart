@@ -3,11 +3,9 @@ import 'package:expandable/expandable.dart';
 import '../themes/measures.dart';
 import '../utils/utils.dart';
 import '../constants/x_icons.dart';
-import '../themes/theme_factory.dart';
 import 'package:flutter/material.dart';
 
 import 'x_row.dart';
-import 'x_text.dart';
 
 class XStepInfo extends StatelessWidget {
 
@@ -37,37 +35,44 @@ class XStepInfo extends StatelessWidget {
                 bottomPostWidget: Icon(XIcons.info_outline,
                 color: onSolidColor // TODO use opacity
                     ? Theme.of(context).colorScheme.onPrimary
-                    : Theme.of(context).colorScheme.onPrimary
-                      .withOpacity(OpacityRatios.normal),
+                    : Theme.of(context).colorScheme.primary.withOpacity(OpacityRatios.normal),
                 ),
               ),
             ),
 
 
-            expanded: Column(
-                children: [
-                  Utils.shrinkIfEmpty(
-                    primaryWidget: expandedWidget,
-                    text: msgText,
-                    textWidget: XText(msgText ?? StringUtils.empty, color: onSolidColor
-                        ? Theme.of(context).colorScheme.onPrimary
-                        : null,
+            expanded: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16), // TODO move to measures file
+              child: Column(
+                  children: [
+                    Utils.shrinkIfEmpty(
+                      primaryWidget: expandedWidget,
+                      text: msgText,
+                      textWidget:
+                      Text(msgText ?? StringUtils.empty, style: TextStyle().copyWith(
+                        color: onSolidColor
+                            ? Theme.of(context).colorScheme.onPrimary
+                            : null
+                      ),
+                      ),
                     ),
-                  ),
 
-                  ExpandableButton(
-                    child: Utils.shrinkIfEmpty(
-                      primaryWidget: backWidget,
-                      text: backText,
-                      textWidget: XText(backText!,color: onSolidColor
-                          ? Theme.of(context).colorScheme.onPrimary
-                          : Theme.of(context).colorScheme.primary,
+                    ExpandableButton(
+                      child: Utils.shrinkIfEmpty(
+                        primaryWidget: backWidget,
+                        text: backText,
+                        textWidget: Text(backText!, style: TextStyle().copyWith(
+                            color: onSolidColor
+                                ? Theme.of(context).colorScheme.onPrimary
+                                : Theme.of(context).colorScheme.secondary
+                        ),
+                        )
                       )
-                    )
 
 
-                  ),
-                ]
+                    ),
+                  ]
+              ),
             ),
           ),
         ],

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'x_step.dart';
 
-class XStepper extends EngStepper {
+class XStepper extends Stepper {
 
   XStepper({
     Key? key,
@@ -12,8 +12,8 @@ class XStepper extends EngStepper {
     StepperType type = StepperType.vertical,
     required int currentStep,
     required ValueChanged<int> onStepTapped,
-    required VoidCallback onStepContinue,
-    required VoidCallback onStepCancel,
+    VoidCallback? onStepContinue,
+    VoidCallback? onStepCancel,
     required ControlsWidgetBuilder controlsBuilder,
   }) : super(
     key: key,
@@ -28,6 +28,7 @@ class XStepper extends EngStepper {
   );
 }
 
+// TODO static?
 List<XStep> buildSteps(List<XStep> source, int currentStep){
   return source.map((s) => XStep(
       isActive: currentStep >= source.indexOf(s),

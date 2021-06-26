@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/utils.dart';
 
 import 'x_bottom_container.dart';
+import 'x_loading.dart';
 import 'x_text.dart';
 
 class XBigButton extends StatelessWidget {
@@ -13,6 +14,7 @@ class XBigButton extends StatelessWidget {
   final double? height;
   final Color? backgroundColor;
   final bool isRoundCorners;
+  final bool isLoading;
 
   
 
@@ -23,13 +25,13 @@ class XBigButton extends StatelessWidget {
     this.height,
     this.backgroundColor,
     required this.onPressed,
-    this.isRoundCorners = true
+    this.isRoundCorners = true,
+    this.isLoading = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    return XBottomContainer(
+    return isLoading ? XLoading() : XBottomContainer(
       child: SizedBox(
         width: 200,
         child: ElevatedButton(
