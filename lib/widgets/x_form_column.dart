@@ -1,4 +1,4 @@
-import '../constants/widgets_utils.dart';
+import '../utils/widgets_utils.dart';
 import 'package:flutter/material.dart';
 
 class XColumn extends StatelessWidget {
