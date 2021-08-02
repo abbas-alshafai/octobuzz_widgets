@@ -33,7 +33,7 @@ dependencies:
 
 
 # ------ Random ------
-  fluttertoast: ^8.0.3
+#  fluttertoast: ^8.0.3
   expandable: ^5.0.1
 
 
