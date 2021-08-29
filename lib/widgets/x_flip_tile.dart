@@ -15,11 +15,11 @@ class XFlipTile extends StatefulWidget {
       required this.title,
       this.icon,
       this.backCardWidgets,
-      required this.onPressed
+      this.onPressed
       })
       : super(key: key);
 
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String title;
   final IconData? icon;
   final int flipDuration;
