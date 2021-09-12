@@ -1,5 +1,4 @@
 // import 'package:fluttertoast/fluttertoast.dart';
-import 'package:octobuzz_widgets/themes/theme_factory.dart';
 
 class XToast {
   static showToast({String? msg, bool isError = false}) {

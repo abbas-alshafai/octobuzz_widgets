@@ -119,7 +119,7 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: title ??
           (StringUtils.instance.isBlank(titleText)
-              ? SizedBox.shrink()
+              ? null
               : Text(
                   titleText!,
                   style: TextStyle().copyWith(
@@ -129,7 +129,7 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: actions,
       backgroundColor: backgroundColor ?? Theme.of(context).backgroundColor, // ?? backgroundColor,
       elevation: elevation,
-      iconTheme: iconTheme,
+      iconTheme: IconTheme.of(context).copyWith(color: Theme.of(context).colorScheme.onBackground),
       textTheme: textTheme,
       centerTitle: centerTitle,
       titleSpacing: titleSpacing,

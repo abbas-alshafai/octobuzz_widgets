@@ -1,14 +1,16 @@
 import 'package:engine_utils/utils/list_utils.dart';
 import 'package:engine_utils/utils/string_utils.dart';
+import 'package:flip_card/flip_card.dart';
+import 'package:flip_card/flip_card_controller.dart';
 
 import '../themes/theme_factory.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_flip_view/flutter_flip_view.dart';
 
 import 'x_flip_tile_back.dart';
 import 'x_flip_tile_front.dart';
 
 class XFlipTile extends StatefulWidget {
+
   const XFlipTile({
       Key? key,
       this.flipDuration = 500,
@@ -31,8 +33,12 @@ class XFlipTile extends StatefulWidget {
 
 class _XFlipTileState extends State<XFlipTile>
     with SingleTickerProviderStateMixin {
+
   late AnimationController _animationController;
   late Animation<double> _curvedAnimation;
+
+  GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
+
 
   @override
   void initState() {
@@ -64,27 +70,34 @@ class _XFlipTileState extends State<XFlipTile>
     return widget.onPressed != null
         ? GestureDetector(
             onTap: widget.onPressed,
-            child: FlipView(
-              animationController: _curvedAnimation,
+            child: FlipCard(
+              // animationController: _curvedAnimation,
+              key: cardKey,
               front: _Card(
                 frontTitle: widget.title,
                 frontIcon: widget.icon,
-//              onTap: () => _flip(true),
+             // onTap: () => _flip(true),
               ),
               back: SizedBox(),
             ),
           )
-        : FlipView(
-            animationController: _curvedAnimation,
+        : FlipCard(
+            // animationController: _curvedAnimation,
             front: _Card(
               frontTitle: widget.title,
               frontIcon: widget.icon,
-              onTap: () => _flip(true),
+              // onTap: () {
+              //   _flip(true);
+              //   cardKey.currentState?.toggleCard();
+              // },
             ),
             back: _Card(
-              onTap: () => _flip(false),
               isBack: true,
               backCardWidgets: widget.backCardWidgets,
+              // onTap: () {
+              //   _flip(false);
+              //   cardKey.currentState?.toggleCard();
+              // },
             ),
           );
   }
@@ -115,7 +128,8 @@ class _Card extends StatelessWidget {
       assert(StringUtils.instance.isNotBlank(frontTitle));
 
     return Container(
-      constraints: BoxConstraints(maxWidth: 200, maxHeight: 200),
+      // TODO measurements
+      constraints: BoxConstraints(maxWidth: 180, maxHeight: 180),
       child: Card(
         elevation: 4,
         clipBehavior: Clip.hardEdge,

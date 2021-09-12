@@ -35,7 +35,8 @@ dependencies:
 # ------ Random ------
 #  fluttertoast: ^8.0.3
   expandable: ^5.0.1
-  flutter_flip_view: ^1.0.3
+#  flutter_flip_view: ^1.0.3
+  flip_card: ^0.5.0
 
 
 

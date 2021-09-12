@@ -21,6 +21,7 @@ class XFlipTileBack extends StatelessWidget {
       height: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: widgets ??
             ( ListUtils.instance.isNotEmpty(itemsInfo)
                 ? itemsInfo!.map((i) => XTextButton(

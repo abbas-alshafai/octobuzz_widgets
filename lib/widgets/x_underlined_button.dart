@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:octobuzz_widgets/widgets/x_text.dart';
+import '../widgets/x_text.dart';
 
 class XUnderlinedButton extends StatelessWidget {
 
