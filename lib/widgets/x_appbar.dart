@@ -127,7 +127,7 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
                 )),
       leading: leading,
       actions: actions,
-      backgroundColor: backgroundColor ?? Theme.of(context).backgroundColor, // ?? backgroundColor,
+      backgroundColor: backgroundColor ?? Theme.of(context).scaffoldBackgroundColor, // ?? backgroundColor,
       elevation: elevation,
       iconTheme: IconTheme.of(context).copyWith(color: Theme.of(context).colorScheme.onBackground),
       textTheme: textTheme,

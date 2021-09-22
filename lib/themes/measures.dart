@@ -35,6 +35,7 @@ import 'package:flutter/cupertino.dart';
 //   }
 // }
 
+@Deprecated('Use [lib/utils/size_utils.dart] instead')
 class SizeUtils{
 
   // Screen Breakpoints
