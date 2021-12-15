@@ -21,16 +21,7 @@ class XStepperControl {
 
 
   ControlsWidgetBuilder build(BuildContext context) {
-
-    Padding(
-      padding: const EdgeInsets.only(top: 16.0, ),
-      child: XRow(
-        bottomPreWidget: _getPre(),
-        bottomPostWidget: _getPost(),
-      ),
-
-    );
-    return (BuildContext context, {VoidCallback? onStepContinue, VoidCallback? onStepCancel}) {
+    return (BuildContext context, ControlsDetails controlsDetails) {
         return Padding(
           padding: const EdgeInsets.only(top: 16.0, ),
           child: XRow(
