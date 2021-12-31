@@ -47,7 +47,6 @@ class XHorizontalListSection extends StatelessWidget {
         titlePadding: titlePadding,
         color: color,
         height: height,
-        hasPadding: true,
         child: items![0],
       );
 
@@ -57,6 +56,7 @@ class XHorizontalListSection extends StatelessWidget {
       titleText: titleText,
       titleTrailing: titleTrailing,
       titlePadding: titlePadding,
+      hasPadding: false,
       color: color,
       height: height,
       padding: padding ?? ( hasPadding

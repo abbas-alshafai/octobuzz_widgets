@@ -13,15 +13,18 @@ class XStepInfo extends StatelessWidget {
   final Widget? expandedWidget;
   final String? backText;
   final Widget? backWidget;
+  final Widget? showMoreWidget;
   final bool onSolidColor;
 
   const XStepInfo({
     Key? key,
+    this.showMoreWidget,
     this.msgText,
     this.expandedWidget,
     this.backText,
     this.backWidget,
-    this.onSolidColor = false})
+    this.onSolidColor = false,
+  })
       : super(key: key);
 
   @override
@@ -31,7 +34,7 @@ class XStepInfo extends StatelessWidget {
         children: [
           Expandable(           // <-- Driven by ExpandableController from ExpandableNotifier
             collapsed: ExpandableButton(  // <-- Expands when tapped on the cover photo
-              child: XRow(
+              child: showMoreWidget ?? XRow(
                 bottomPostWidget: Icon(XIcons.info_outline,
                 color: onSolidColor // TODO use opacity
                     ? Theme.of(context).colorScheme.onPrimary
@@ -61,15 +64,13 @@ class XStepInfo extends StatelessWidget {
                       child: Utils.shrinkIfEmpty(
                         primaryWidget: backWidget,
                         text: backText,
-                        textWidget: Text(backText!, style: TextStyle().copyWith(
+                        textWidget: Text(backText ?? '', style: TextStyle().copyWith(
                             color: onSolidColor
                                 ? Theme.of(context).colorScheme.onPrimary
                                 : Theme.of(context).colorScheme.secondary
                         ),
                         )
                       )
-
-
                     ),
                   ]
               ),

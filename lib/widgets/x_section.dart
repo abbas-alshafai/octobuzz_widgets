@@ -35,7 +35,7 @@ class XSection extends StatelessWidget {
     this.hasSpace = true,
     this.titlePadding,
     this.padding,
-    this.hasPadding = false,
+    this.hasPadding = true,
   }) : super(key: key);
 
   @override
