@@ -19,10 +19,12 @@ class XTextFormField extends StatelessWidget {
   final String? initialValue;
   final int maxLines;
   final InputDecoration? inputDecoration;
+  final TextEditingController? controller;
   final Key? key;
 
   XTextFormField({
     this.onChanged,
+    this.controller,
     this.obscureText = false,
     this.validator,
     this.onSaved,
@@ -42,57 +44,10 @@ class XTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
 
     TextStyle textStyle = TextStyle();
-    /*
-    TODO
-    TextStyle textStyle = TextStyle(
-      fontFamily: ArabicFonts.Cairo,
-      package: 'google_fonts_arabic',
-    );
 
-     */
-
-
-    /*
-    EngTextFormField(
-
-      key: key,
-
-      obscureText: obscureText,
-      initialValue: initialValue,
-      onChanged: onChanged,
-      validator: validator,
-      keyboardType: keyboardType,
-      maxLines: maxLines,
-      onSaved: onSaved,
-
-      style: textStyle,
-      decoration: InputDecoration(
-        hintText: hintText,
-        // fillColor: ThemeFactory.instance.getTheme().frontBackgroundColor,
-        filled: true,
-        border: border,
-        errorBorder: errorBorder,
-        contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
-
-        enabledBorder: OutlineInputBorder(
-          borderSide:
-            BorderSide(
-              // color: ThemeFactory.instance.getTheme().secondary,
-              width: outlineInputWidth
-            ),
-        ),
-
-        focusedBorder: focusedBorder ?? OutlineInputBorder(
-          borderSide: BorderSide(
-            color: ThemeFactory.instance.getTheme().themeData.primaryColor,
-            width: outlineInputWidth
-          ),
-        ),
-      ),
-    );
-    */
 
     return TextFormField(
+      controller: controller,
       obscureText: obscureText,
       initialValue: initialValue,
       onChanged: onChanged,

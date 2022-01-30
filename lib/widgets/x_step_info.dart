@@ -30,6 +30,7 @@ class XStepInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpandableNotifier(  // <-- Provides ExpandableController to its children
+
       child: Column(
         children: [
           Expandable(           // <-- Driven by ExpandableController from ExpandableNotifier

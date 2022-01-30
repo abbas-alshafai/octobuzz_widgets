@@ -108,6 +108,9 @@ const double vDoubleSpace = 40.0;
 const double hSpace = 8.0;
 const double hDoubleSpace = 48.0;
 
+const double componentPadding = 24;
+
+
 // Max width
 const double contentMaxWidth = 512;
 
