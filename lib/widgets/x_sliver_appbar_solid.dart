@@ -1,5 +1,3 @@
-import 'package:google_fonts/google_fonts.dart';
-
 import '../themes/theme_factory.dart';
 import '../widgets/x_appbar.dart';
 import '../widgets/x_text.dart';

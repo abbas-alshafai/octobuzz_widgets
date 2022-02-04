@@ -18,7 +18,7 @@ dependencies:
   flutter_signin_button: ^2.0.0
 
 # ---- Fonts ------
-  google_fonts: ^2.3.0
+#  google_fonts: ^2.3.0
 
 # ---- Icons ------
   fluentui_system_icons: ^1.1.112

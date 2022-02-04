@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class ThemeFactory {
   ThemeFactory._();
@@ -90,41 +90,42 @@ TextTheme _buildTextTheme(TextTheme base) {
 
   return
       // base
-      GoogleFonts.poppinsTextTheme()
-          .copyWith(
-            headline5: base.headline5!.copyWith(
-              fontWeight: FontWeight.w500,
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-            headline6: base.headline6!.copyWith(
-              fontSize: 18,
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-            caption: base.caption!.copyWith(
-              fontWeight: FontWeight.w400,
-              fontSize: 14,
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-            bodyText2: base.bodyText2!.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 16,
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-            bodyText1: base.bodyText1!.copyWith(
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-            subtitle1: base.subtitle1!.copyWith(
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-            headline4: base.headline4!.copyWith(
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-            button: base.button!.copyWith(
-              fontWeight: FontWeight.w500,
-              fontSize: 14,
-              letterSpacing: oneDefaultLetterSpacing,
-            ),
-          )
+      base
+      // GoogleFonts.poppinsTextTheme()
+      //     .copyWith(
+      //       headline5: base.headline5!.copyWith(
+      //         fontWeight: FontWeight.w500,
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //       headline6: base.headline6!.copyWith(
+      //         fontSize: 18,
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //       caption: base.caption!.copyWith(
+      //         fontWeight: FontWeight.w400,
+      //         fontSize: 14,
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //       bodyText2: base.bodyText2!.copyWith(
+      //         fontWeight: FontWeight.w500,
+      //         fontSize: 16,
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //       bodyText1: base.bodyText1!.copyWith(
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //       subtitle1: base.subtitle1!.copyWith(
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //       headline4: base.headline4!.copyWith(
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //       button: base.button!.copyWith(
+      //         fontWeight: FontWeight.w500,
+      //         fontSize: 14,
+      //         letterSpacing: oneDefaultLetterSpacing,
+      //       ),
+      //     )
           .apply(
             fontFamily: 'Rubik',
             displayColor: palette1.darkerPrimary,
