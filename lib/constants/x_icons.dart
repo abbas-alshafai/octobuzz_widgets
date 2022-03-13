@@ -9,6 +9,7 @@ class XIcons{
   static const IconData remove = Icons.remove;
   static const IconData save = LineIcons.save;
   static const IconData addCircleOutline = LineIcons.plusCircle;
+  static const IconData minusCircleOutline = LineIcons.minusCircle;
   static const IconData camera = LineIcons.camera;
   static const IconData done = Icons.done;
   static const IconData attachFile = Icons.attach_file;

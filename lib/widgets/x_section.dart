@@ -12,7 +12,7 @@ class XSection extends StatelessWidget {
   final String? titleText;
   final Widget? title;
   final Widget? titleTrailing;
-  final Widget child;
+  final Widget? child;
   final Color? color;
   final Color? textColor;
   final double? height;
@@ -21,12 +21,14 @@ class XSection extends StatelessWidget {
   final EdgeInsetsGeometry? titlePadding;
   final bool hasSpace;
   final bool hasPadding;
+  final String? noChildText;
+  final bool isEmptyChild;
 
   const XSection({
     Key? key,
     this.titleText,
     this.title,
-    required this.child,
+    this.child,
     this.color,
     this.height,
     this.textColor,
@@ -36,6 +38,8 @@ class XSection extends StatelessWidget {
     this.titlePadding,
     this.padding,
     this.hasPadding = true,
+    this.noChildText,
+    this.isEmptyChild = false,
   }) : super(key: key);
 
   @override
@@ -45,9 +49,13 @@ class XSection extends StatelessWidget {
       text: titleText,
       textWidget: XText(
         titleText ?? StringUtils.empty,
-        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-              color: textColor,
-            ),
+        style: Theme
+            .of(context)
+            .textTheme
+            .subtitle1
+            ?.copyWith(
+          color: textColor,
+        ),
       ),
     );
 
@@ -63,19 +71,42 @@ class XSection extends StatelessWidget {
         children: [
           titlePadding == null
               ? XRow(
-                  bottomPreWidget: _title,
-                  bottomPostWidget: titleTrailing,
-                )
+            bottomPreWidget: _title,
+            bottomPostWidget: titleTrailing,
+          )
               : Padding(
-                  padding: titlePadding!,
-                  child: XRow(
-                    bottomPreWidget: _title,
-                    bottomPostWidget: titleTrailing,
-                  ),
-                ),
-          if (hasSpace || spaceHeight > 0)
+            padding: titlePadding!,
+            child: XRow(
+              bottomPreWidget: _title,
+              bottomPostWidget: titleTrailing,
+            ),
+          ),
+
+          if (!isEmptyChild && child != null && (hasSpace || spaceHeight > 0))
             SizedBox(height: spaceHeight > 0 ? spaceHeight : vSpace),
-          child
+          if(!isEmptyChild && child != null)
+            child!,
+
+          if(isEmptyChild && noChildText != null)
+            ...[
+              SizedBox(height: spaceHeight > 0 ? spaceHeight : vSpace),
+              Center(
+                child: Text(
+                  noChildText ?? '',
+                  style: Theme
+                      .of(context)
+                      .textTheme
+                      .bodySmall
+                      ?.copyWith(color: Theme
+                      .of(context)
+                      .colorScheme
+                      .onSurface
+                      .withOpacity(0.5)),
+                ),
+              ),
+              // const SizedBox(height: vSpace),
+            ]
+
         ],
       ),
     );

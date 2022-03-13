@@ -9,27 +9,19 @@ import 'package:flutter/material.dart';
 
 class XLoadingPage extends StatelessWidget {
   final String? msg;
+  final bool showAppBar;
 
-  const XLoadingPage({Key? key, this.msg}) : super(key: key);
+  const XLoadingPage({Key? key, this.msg, this.showAppBar = true}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return XScaffold(
-      appBar: XAppBar(
+      appBar: !showAppBar ? null : XAppBar(
         // TODO remove below - no need
         titleText: 'Loading',
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            XLoading(),
-            SizedBox(height: vDoubleSpace,),
-            if(StringUtils.instance.isNotBlank(msg))
-              Text(msg!),
-          ],
-        ),
+        child: XLoading(msg: msg),
       ),
     );
   }

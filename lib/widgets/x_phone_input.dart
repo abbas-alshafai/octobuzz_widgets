@@ -25,7 +25,7 @@ class XPhoneInput extends StatelessWidget {
   final String? hintText;
   final String? pattern;
 
-  final ValueChanged? onChanged;
+  final ValueChanged<String>? onChanged;
   final FormFieldSetter? onSaved;
   final FormFieldValidator? validator;
   final int maxLines = 1;

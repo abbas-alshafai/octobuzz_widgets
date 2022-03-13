@@ -18,6 +18,7 @@ class XTextFormField extends StatelessWidget {
   final InputBorder? border;
   final String? initialValue;
   final int maxLines;
+  final int? minLines;
   final InputDecoration? inputDecoration;
   final TextEditingController? controller;
   final Key? key;
@@ -36,6 +37,7 @@ class XTextFormField extends StatelessWidget {
     this.initialValue,
     this.inputDecoration,
     this.maxLines = 1,
+    this.minLines,
     this.key
   });
 //      : super(key: key);
@@ -45,7 +47,6 @@ class XTextFormField extends StatelessWidget {
 
     TextStyle textStyle = TextStyle();
 
-
     return TextFormField(
       controller: controller,
       obscureText: obscureText,
@@ -54,6 +55,7 @@ class XTextFormField extends StatelessWidget {
       validator: validator,
       keyboardType: keyboardType,
       maxLines: maxLines,
+      minLines: minLines,
       onSaved: onSaved,
       style: textStyle,
 

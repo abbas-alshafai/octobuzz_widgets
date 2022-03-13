@@ -9,20 +9,35 @@ class XLoading extends StatelessWidget {
   final double? size;
   final Color? color;
   final bool isSmall;
+  final String? msg;
 
-  const XLoading({Key? key, this.isSmall = false, this.size, this.color}) : super(key: key);
+  const XLoading(
+      {Key? key, this.isSmall = false, this.size, this.color, this.msg,})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: SizedBox(
-          width: size ?? ( _size / (isSmall ? 2 : 1) ),
-          height:  size ?? ( _size / (isSmall ? 2 : 1) ),
-          child: LoadingIndicator(
-              indicatorType: Indicator.ballClipRotate,
-              color: Theme.of(context).primaryColor
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(
+            width: size ?? (_size / (isSmall ? 2 : 1)),
+            height: size ?? (_size / (isSmall ? 2 : 1)),
+            child: LoadingIndicator(
+                indicatorType: Indicator.ballClipRotate,
+                color: Theme
+                    .of(context)
+                    .primaryColor
+            ),
           ),
-        )
+          // TODO
+          SizedBox(height: 48,),
+          if(msg != null)
+            Text(msg!),
+        ],
+      ),
     );
   }
 }
