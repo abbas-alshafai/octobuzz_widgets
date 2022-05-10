@@ -27,23 +27,25 @@ class XCenterMsg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final List<Widget> contents = [];
 
-    if(imageWidget != null)
+    if (imageWidget != null)
       contents.add(XMainScreenContent(child: imageWidget!));
 
     contents.add(XMainScreenContent(
-      child: XText(
-        msg ?? StringUtils.empty,
-        // style: centerLargeText,
-        style: Theme.of(context).textTheme.headline5,
-        textAlign: TextAlign.center,
-        maxLines: 5,
-      )
-    ));
+        child: XText(
+          msg ?? StringUtils.empty,
+          // style: centerLargeText,
+          style: Theme
+              .of(context)
+              .textTheme
+              .headline5,
+          textAlign: TextAlign.center,
+          maxLines: 5,
+        )
+    ),);
 
-    if(actionMsg != null || actionWidget != null) {
+    if (actionMsg != null || actionWidget != null) {
       contents.add(const SizedBox(
         height: vDoubleSpace,
       ));

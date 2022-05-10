@@ -68,6 +68,8 @@ class XSection extends StatelessWidget {
               : const EdgeInsets.symmetric(vertical: 0, horizontal: 0)), // TODO
 
       child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           titlePadding == null
               ? XRow(

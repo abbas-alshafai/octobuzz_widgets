@@ -18,7 +18,7 @@ class XLoadingPage extends StatelessWidget {
     return XScaffold(
       appBar: !showAppBar ? null : XAppBar(
         // TODO remove below - no need
-        titleText: 'Loading',
+        titleText: msg == null ? 'Loading' : null,
       ),
       body: Center(
         child: XLoading(msg: msg),
