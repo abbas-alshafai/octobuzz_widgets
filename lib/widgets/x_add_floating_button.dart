@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class XAddFloatingButton extends StatelessWidget {
   final VoidCallback? onPressed;
 
-  const XAddFloatingButton({Key? key, this.onPressed}) : super(key: key);
+  const XAddFloatingButton(this.onPressed, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
