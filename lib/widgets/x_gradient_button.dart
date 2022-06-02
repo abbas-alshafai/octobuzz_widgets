@@ -1,9 +1,9 @@
-import 'package:engine_utils/utils/string_utils.dart';
+
+import 'package:buzz_utils/buzz_utils.dart';
 
 import '../utils/utils.dart';
 
 import '../themes/theme_factory.dart';
-import '../widgets/x_text.dart';
 import 'package:flutter/material.dart';
 
 class XGradientButton extends StatelessWidget {
@@ -51,9 +51,10 @@ class XGradientButton extends StatelessWidget {
           child: Utils.shrinkIfEmpty(
             primaryWidget: textWidget,
             text: text,
-            textWidget: XText( text ?? StringUtils.empty,
-              style: textStyle,
-              color: textColor ?? Colors.white,
+            textWidget: Text( text ?? StringUtils.empty,
+              style: textStyle ?? TextStyle().copyWith(
+                color: textColor ?? Colors.white
+              ),
             )
           ),
         ),
@@ -89,7 +90,7 @@ class XGradientButton extends StatelessWidget {
 //          ],
 //        ),
 //        child: Center(
-//          child: textWidget ?? XText( text,
+//          child: textWidget ?? Text( text,
 ////            style: TextStyle(
 ////              color: Colors.white,
 ////              fontSize: 30,

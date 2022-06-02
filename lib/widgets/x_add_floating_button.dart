@@ -1,19 +1,21 @@
-
 import '../constants/x_icons.dart';
 import '../themes/theme_factory.dart';
 import 'package:flutter/material.dart';
 
-import 'x_floating_button.dart';
+class XAddFloatingButton extends StatelessWidget {
+  final VoidCallback? onPressed;
 
-class XAddFloatingButton extends XFloatingButton {
+  const XAddFloatingButton({Key? key, this.onPressed}) : super(key: key);
 
-  XAddFloatingButton(onPressed) :
-      super(
-        onPressed: onPressed,
-        child: Icon(
-          XIcons.add,
-          color: ThemeFactory.instance.getTheme().themeData.backgroundColor,
-          size: 32,
-        ),
-      );
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(
+      onPressed: onPressed,
+      child: Icon(
+        XIcons.add,
+        color: ThemeFactory.instance.getTheme().themeData.backgroundColor,
+        size: 32,
+      ),
+    );
+  }
 }

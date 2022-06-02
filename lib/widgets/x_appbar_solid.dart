@@ -1,4 +1,5 @@
-import 'package:engine_utils/utils/string_utils.dart';
+import 'package:buzz_utils/buzz_utils.dart';
+
 import '../widgets/x_appbar.dart';
 import 'package:flutter/material.dart';
 

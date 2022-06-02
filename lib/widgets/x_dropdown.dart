@@ -26,7 +26,7 @@
 //           padding: const EdgeInsets.all(8.0),
 //           child: Row(
 //             children: [
-//               XText(text),
+//               Text(text),
 //               Spacer(),
 //               XIcon(
 //                 XIcons.down_arrow,
@@ -80,7 +80,7 @@
 //           padding: const EdgeInsets.all(8.0), // TODO
 //           child: Row(
 //             children: [
-//               XText(text),
+//               Text(text),
 //               Spacer(),
 //               XIcon(
 //                 XIcons.down_arrow,
@@ -99,7 +99,7 @@
 //         context: context,
 //         builder: (BuildContext context) {
 //           return AlertDialog(
-//             title: XText(dialogTitle),
+//             title: Text(dialogTitle),
 //             content: StatefulBuilder(
 //               builder: (context, setState) {
 //                 return Column(
@@ -115,7 +115,7 @@
 //                         },
 //                       ),
 //
-//                       title: XText(onSelectedItemText),
+//                       title: Text(onSelectedItemText),
 //                     );
 //
 //                   }),
@@ -125,7 +125,7 @@
 //
 //             actions: <Widget>[
 //               XFlatButton(
-//                 child: XText(doneText),
+//                 child: Text(doneText),
 //                 onPressed: onDonePressed ?? (){
 //                   Navigator.pop(context);
 //                 }

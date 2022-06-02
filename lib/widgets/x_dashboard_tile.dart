@@ -1,4 +1,5 @@
-import 'package:engine_utils/utils/string_utils.dart';
+
+import 'package:buzz_utils/buzz_utils.dart';
 
 import '../utils/utils.dart';
 
@@ -6,7 +7,6 @@ import '../themes/measures.dart';
 import '../themes/theme_factory.dart';
 import 'package:flutter/material.dart';
 
-import 'x_text.dart';
 
 class XDashboardTile extends StatelessWidget{
   const XDashboardTile({
@@ -66,7 +66,7 @@ class XDashboardTile extends StatelessWidget{
               height: 24,
             ),
 
-            XText(
+            Text(
               title,
               style: TextStyle(
                 color: textColor ?? Colors.white,

@@ -1,9 +1,7 @@
-import 'package:engine_utils/utils/string_utils.dart';
+import 'package:buzz_utils/buzz_utils.dart';
 import 'package:flutter/material.dart';
 import '../utils/utils.dart';
 import '../themes/measures.dart';
-import '../widgets/x_container_padding.dart';
-import '../widgets/x_text.dart';
 
 import 'x_container.dart';
 import 'x_row.dart';
@@ -47,7 +45,7 @@ class XSection extends StatelessWidget {
     Widget _title = Utils.shrinkIfEmpty(
       primaryWidget: title,
       text: titleText,
-      textWidget: XText(
+      textWidget: Text(
         titleText ?? StringUtils.empty,
         style: Theme
             .of(context)

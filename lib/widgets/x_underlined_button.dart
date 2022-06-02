@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../widgets/x_text.dart';
 
 class XUnderlinedButton extends StatelessWidget {
 
@@ -20,7 +19,7 @@ class XUnderlinedButton extends StatelessWidget {
     assert(Theme.of(context).accentTextTheme.bodyText2 != null);
     return GestureDetector(
       onTap: onPressed,
-      child: XText( text,
+      child: Text( text,
         style: Theme.of(context).accentTextTheme.bodyText2!
             .copyWith(
               decoration: TextDecoration.underline,

@@ -20,7 +20,7 @@
 //         ? TextStyle(fontWeight: FontWeight.bold, color: Colors.red)
 //         : TextStyle(fontWeight: FontWeight.bold);
 //
-//     return XText(
+//     return Text(
 //       NumberUtils.instance.formatAmount(price),
 //       style: style,
 //     );

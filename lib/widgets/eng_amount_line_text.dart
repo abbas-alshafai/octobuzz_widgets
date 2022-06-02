@@ -29,7 +29,7 @@
 //          price: price,
 //          discount: discount,
 //        ),
-//        XText(empty),
+//        Text(empty),
 //        PriceBeforeDiscountText(
 //          price: price,
 //        ),

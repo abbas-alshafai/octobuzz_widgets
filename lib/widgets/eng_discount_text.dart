@@ -15,7 +15,7 @@
 //
 //    return isNotDiscounted
 //        ? null
-//        : XText(
+//        : Text(
 //            Utils.instance.formatAmount(discount),
 //          );
 //  }

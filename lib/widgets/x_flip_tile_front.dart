@@ -1,11 +1,10 @@
-import 'package:engine_utils/utils/string_utils.dart';
+
+import 'package:buzz_utils/buzz_utils.dart';
 
 import '../utils/utils.dart';
 
 import '../themes/measures.dart';
-import '../widgets/x_text.dart';
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
 
 class XFlipTileFront extends StatelessWidget {
   const XFlipTileFront({
@@ -46,7 +45,7 @@ class XFlipTileFront extends StatelessWidget {
 
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 2.0),
-            child: XText(
+            child: Text(
               title,
 //               style: GoogleFonts.comfortaa(
 //                 color: textColor ?? Colors.white, // TODO - move color to theme

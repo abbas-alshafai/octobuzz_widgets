@@ -1,7 +1,6 @@
-import 'package:engine_widgets/widgets/eng_scaffold.dart';
 import 'package:flutter/material.dart';
 
-class XScaffold extends EngScaffold {
+class XScaffold extends Scaffold {
 
   XScaffold({
     PreferredSizeWidget? appBar,

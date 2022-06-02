@@ -1,6 +1,4 @@
-import 'package:engine_widgets/widgets/eng_text.dart';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 
@@ -45,7 +43,7 @@ class XMoreIndicator extends StatelessWidget {
     if(color != null)
       textStyle = textStyle.copyWith(color: color);
 
-    return EngText(
+    return Text(
       ' ... ',
       style: style ?? textStyle,
       overflow: overflow,

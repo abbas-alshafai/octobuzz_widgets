@@ -38,7 +38,7 @@
 //   Widget opt2(BuildContext context) {
 //     return SlideAction(
 //       text: text,
-//       child: XText(text),
+//       child: Text(text),
 //       elevation: 0,
 //       sliderButtonIconSize: 20,
 //       onSubmit: onSlide,

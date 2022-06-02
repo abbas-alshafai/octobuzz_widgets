@@ -1,8 +1,7 @@
-import 'package:engine_utils/utils/string_utils.dart';
+import 'package:buzz_utils/buzz_utils.dart';
 import 'package:flutter/material.dart';
 import '../widgets/x_text_form_field.dart';
 
-import 'x_text.dart';
 
 class XCurrencyInput extends StatelessWidget {
 
@@ -35,7 +34,7 @@ class XCurrencyInput extends StatelessWidget {
     Widget _currency = currency ?? (
         StringUtils.instance.isBlank(currencyText)
             ? SizedBox.shrink()
-            : XText(currencyText!)
+            : Text(currencyText!)
     );
 
     Widget _input = inputField ?? XTextFormField(

@@ -1,7 +1,5 @@
-import 'package:engine_utils/utils/list_utils.dart';
-import 'package:engine_utils/utils/string_utils.dart';
+import 'package:buzz_utils/buzz_utils.dart';
 import 'package:flip_card/flip_card.dart';
-import 'package:flip_card/flip_card_controller.dart';
 
 import '../themes/theme_factory.dart';
 import 'package:flutter/material.dart';

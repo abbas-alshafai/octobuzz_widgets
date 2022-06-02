@@ -84,13 +84,13 @@ class XAttachImage extends StatelessWidget {
       //               children: <Widget>[
       //                 ListTile(
       //                   leading: XIcon(XIcons.camera),
-      //                   title: XText(cameraText),
+      //                   title: Text(cameraText),
       //                   onTap: onCamera,
       //                 ),
       //
       //                 ListTile(
       //                   leading: XIcon(XIcons.attachFile),
-      //                   title: XText(galleryText),
+      //                   title: Text(galleryText),
       //                   onTap: onAttachFile,
       //                 ),
       //               ],

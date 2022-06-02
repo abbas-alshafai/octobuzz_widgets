@@ -1,14 +1,15 @@
-import '../themes/measures.dart';
-import '../themes/theme_factory.dart';
 import 'package:flutter/material.dart';
 
-import 'x_text.dart';
+import '../themes/measures.dart';
+import '../themes/theme_factory.dart';
 
-class XErrText extends XText {
+class XErrText extends Text {
   XErrText(String text)
       : super(
           text,
-          size: errFontSize,
-          color: ThemeFactory.instance.getTheme().themeData.errorColor,
+          style: TextStyle().copyWith(
+            fontSize: errFontSize,
+            color: ThemeFactory.instance.getTheme().themeData.errorColor,
+          ),
         );
 }

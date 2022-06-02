@@ -54,7 +54,7 @@
 //       primaryWidget: titleWidget,
 //       text: titleText,
 //       textWidget: XMainScreenContent(
-//           child: XText(titleText!,
+//           child: Text(titleText!,
 //             color: titleColor ?? ThemeFactory.instance.getTheme().onPrimarySolidContrast,
 //             style: GoogleFonts.comfortaa(
 //               color: descriptionColor
@@ -69,7 +69,7 @@
 //       primaryWidget: descriptionWidget,
 //       text: descriptionText,
 //       textWidget: XMainScreenContent(
-//           child: XText(descriptionText ?? StringUtils.empty,
+//           child: Text(descriptionText ?? StringUtils.empty,
 //             color: descriptionColor
 //                 ?? ThemeFactory.instance.getTheme().onPrimarySolidContrast,
 //             maxLines: 20,

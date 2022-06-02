@@ -1,4 +1,5 @@
-import 'package:engine_utils/utils/string_utils.dart';
+import 'package:buzz_utils/buzz_utils.dart';
+
 import '../utils/utils.dart';
 import '../widgets/x_text_button.dart';
 import '../widgets/x_row.dart';

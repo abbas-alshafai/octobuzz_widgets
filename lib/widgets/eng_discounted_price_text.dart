@@ -29,7 +29,7 @@
 //        ? Decimal.parse(price.toString()) - Decimal.parse(discount.toString())
 //        : Decimal.parse(price.toString());
 //
-//    return XText(
+//    return Text(
 //      Utils.instance.formatAmount(double.parse(finalPrice.toString())),
 //      style: style,
 //    );

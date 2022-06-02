@@ -1,6 +1,5 @@
 import '../utils/utils.dart';
 
-import 'x_text.dart';
 import 'package:flutter/material.dart';
 
 class XRadioListTile<T> extends StatelessWidget {

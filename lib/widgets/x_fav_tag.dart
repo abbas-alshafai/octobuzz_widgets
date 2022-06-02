@@ -2,7 +2,6 @@ import '../themes/theme_factory.dart';
 import 'package:flutter/material.dart';
 
 import 'x_tag.dart';
-import 'x_text.dart';
 
 class XFavTag extends XTag{
 

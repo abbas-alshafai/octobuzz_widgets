@@ -1,7 +1,5 @@
-import 'package:engine_widgets/widgets/eng_elevated_button.dart';
 import 'package:flutter/material.dart';
 
-import 'x_text.dart';
 
 
 class XTextButton extends StatelessWidget {
@@ -20,8 +18,7 @@ class XTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-
-      child: child ?? XText(text!,
+      child: child ?? Text(text!,
         style: Theme.of(context).textTheme.button?.copyWith(color: textColor),
       ),
       style: style,

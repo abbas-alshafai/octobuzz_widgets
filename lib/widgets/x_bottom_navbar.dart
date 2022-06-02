@@ -43,7 +43,7 @@ class _XBottomNavBarState extends State<XBottomNavBar> {
             BottomNavigationBarItem(
               icon: Icon(e.icon),
               label: e.title,
-              // title: XText(e.title),
+              // title: Text(e.title),
             )).toList(),
         currentIndex: _currentIndex,
         // selectedItemColor: Colors.amber[800],
@@ -144,7 +144,7 @@ class _XBottomNavBarState extends State<XBottomNavBar> {
   //     },
   //     items: widget.items.map((e) => TitledNavigationBarItem(
   //       icon: e.icon,
-  //       title: XText(e.title),
+  //       title: Text(e.title),
   //       backgroundColor: e.color,
   //     )).toList(),
   //   );
@@ -195,7 +195,7 @@ class _XBottomNavBarState extends State<XBottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(e.icon),
             label: e.title,
-            // title: XText(e.title),
+            // title: Text(e.title),
           )).toList(),
     );
   }

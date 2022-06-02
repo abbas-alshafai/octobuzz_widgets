@@ -39,14 +39,14 @@
 //
 //   if(StringUtils.instance.isNotBlank(menu.titleText))
 //     children.add(
-//       XText(menu.titleText!,
+//       Text(menu.titleText!,
 //         size: 24,
 //         color: ThemeFactory.instance.getTheme().themeData.primaryColor,
 //       ),
 //     ); // TODO add text style
 //
 //   if(StringUtils.instance.isNotBlank(menu.subtitleText))
-//     children.add(XText(menu.subtitleText!)); // TODO add text style
+//     children.add(Text(menu.subtitleText!)); // TODO add text style
 //
 //   if(StringUtils.instance.isNotBlank(menu.titleText) ||
 //       StringUtils.instance.isNotBlank(menu.subtitleText)) {
@@ -61,7 +61,7 @@
 //       children: <Widget>[
 //         ListTile(
 //           leading: Icon(e.icon),
-//           title: XText(e.titleText),
+//           title: Text(e.titleText),
 //           onTap: e.onTap,
 //         ),
 //       ],
@@ -76,11 +76,11 @@
 //               color: ThemeFactory.instance.getTheme().onPrimarySolidContrast),
 //           trailing: Icon(item.icon,
 //               color: ThemeFactory.instance.getTheme().onPrimarySolidContrast),
-//           title: XText(item.titleText,
+//           title: Text(item.titleText,
 //               color: ThemeFactory.instance.getTheme().onPrimarySolidContrast),
 //           subtitle: StringUtils.instance.isBlank(item.subtitleText)
 //               ? null
-//               : XText(item.subtitleText!,
+//               : Text(item.subtitleText!,
 //                   color: ThemeFactory.instance.getTheme().onPrimarySolidContrast
 //                 ),
 //           onTap: item.onTap,

@@ -177,7 +177,7 @@
 //   //       children: menuItems.map((item) =>
 //   //         SafeArea(child: RaisedButton.icon(
 //   //             icon: XIcon(item.icon),
-//   //             label: XText(item.titleText),
+//   //             label: Text(item.titleText),
 //   //             onPressed: (){}
 //   //         ),)
 //   //       ).toList()

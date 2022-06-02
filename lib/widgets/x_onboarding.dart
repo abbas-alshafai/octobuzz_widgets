@@ -96,19 +96,19 @@
 //     // return Builder(
 //     //   builder: (context) => IntroViewsFlutter(
 //     //     pages.map((e) => PageViewModel(
-//     //       title: XText(e.titleText),
+//     //       title: Text(e.titleText),
 //     //       pageColor: e.backgroundColor,
-//     //       body: XText(e.descriptionText),
+//     //       body: Text(e.descriptionText),
 //     //
 //     //       mainImage: SizedBox(),
 //     //     )).toList(),
 //     //     background: Colors.amber,
-//     //     doneText: XText("Done"),
+//     //     doneText: Text("Done"),
 //     //     showNextButton: true,
 //     //     showBackButton: true,
 //     //     onTapDoneButton: onFinished,
-//     //     nextText: XText("Next"),
-//     //     backText: XText("Back"),
+//     //     nextText: Text("Next"),
+//     //     backText: Text("Back"),
 //     //     pageButtonTextStyles: TextStyle(
 //     //       color: Colors.white,
 //     //       fontSize: 18.0,

@@ -1,7 +1,5 @@
-import 'package:engine_utils/utils/string_utils.dart';
-import 'package:engine_widgets/utils/eng_utils.dart';
+import 'package:buzz_utils/buzz_utils.dart';
 import 'package:flutter/material.dart';
-import '../widgets/x_text.dart';
 
 class Utils{
 
@@ -11,14 +9,12 @@ class Utils{
     final Widget? textWidget,
     final Widget? emptyTextWidget
   }){
-
-    return EngUtils.shrinkIfEmpty(
-      primaryWidget: primaryWidget,
-      text: text,
-      textWidget: textWidget ?? (StringUtils.instance.isBlank(text)
-          ? SizedBox.shrink()
-          : XText(text!)),
-      emptyTextWidget: emptyTextWidget,
+    return primaryWidget ?? (
+        StringUtils.instance.isBlank(text)
+            ? (emptyTextWidget ?? SizedBox.shrink())
+            : textWidget ?? (StringUtils.instance.isBlank(text)
+            ? SizedBox.shrink()
+            : Text(text!))
     );
   }
 

@@ -1,7 +1,3 @@
-import 'package:engine_utils/utils/string_utils.dart';
-import 'package:engine_widgets/widgets/eng_list_tile.dart';
-
-import 'x_text.dart';
 import 'package:flutter/material.dart';
 
 class XListTile extends StatelessWidget {
@@ -29,20 +25,11 @@ class XListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return EngListTile(
-      
+    return ListTile(
       leading: leading,
-      trailing: trailing ?? (
-        StringUtils.instance.isNotBlank(trailingText)
-            ? XText(trailingText!)
-            : SizedBox.shrink()
-      ),
-      title: StringUtils.instance.isNotBlank(titleText)
-          ? XText(titleText!)
-          : title,
-      subtitle: StringUtils.instance.isNotBlank(subtitleText)
-          ? XText(subtitleText!)
-          : subtitle,
+      trailing: trailing,
+      title: titleText == null ? null : Text(titleText!),
+      subtitle: subtitleText == null ? null : Text(subtitleText!),
       onTap: onTap,
     );
   }

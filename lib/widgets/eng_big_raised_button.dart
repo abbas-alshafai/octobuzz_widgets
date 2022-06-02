@@ -30,7 +30,7 @@
 //       child: EngRaisedButton(
 //         onPressed: onPressed,
 //         color: ThemeFactory.instance.getTheme().themeData.primaryColor,
-//         child: XText(
+//         child: Text(
 //           text,
 //           style: TextStyle(
 //             fontSize: bigBtnFontSize,

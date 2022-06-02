@@ -42,7 +42,7 @@
 //
 //     Widget _child;
 //     if( StringUtils.instance.isNotBlank(text) )
-//       _child = XText(text!, color: _color,);
+//       _child = Text(text!, color: _color,);
 //     else if(icon != null){
 //       assert(icon != null);
 //       _child = XIcon(

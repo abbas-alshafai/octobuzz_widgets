@@ -27,7 +27,7 @@
 //         : ThemeFactory.instance.getTheme().secondary,
 //       onPressed: onPressed ?? () {
 //         XDialog.show(context,
-//           textWidget: displayChild ?? XText(msg ?? msgKey),
+//           textWidget: displayChild ?? Text(msg ?? msgKey),
 //           singleActionText: singleActionText,
 //           singleActionOnPressed: () {
 //             Navigator.of(context).pop();

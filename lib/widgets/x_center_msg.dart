@@ -1,11 +1,11 @@
-import 'package:engine_utils/utils/string_utils.dart';
+import 'package:buzz_utils/buzz_utils.dart';
+
 import '../themes/measures.dart';
 
 import 'package:flutter/material.dart';
 
 import 'x_container_padding.dart';
 import 'x_main_screen_content.dart';
-import 'x_text.dart';
 
 class XCenterMsg extends StatelessWidget {
 
@@ -33,7 +33,7 @@ class XCenterMsg extends StatelessWidget {
       contents.add(XMainScreenContent(child: imageWidget!));
 
     contents.add(XMainScreenContent(
-        child: XText(
+        child: Text(
           msg ?? StringUtils.empty,
           // style: centerLargeText,
           style: Theme

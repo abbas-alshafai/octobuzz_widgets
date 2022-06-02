@@ -54,7 +54,7 @@
 //               mainAxisAlignment: MainAxisAlignment.start,
 //               mainAxisSize: MainAxisSize.max,
 //               children: <Widget>[
-//                 XText("Week Summary",
+//                 Text("Week Summary",
 //                   color: ThemeFactory.instance.getTheme().themeData.primaryColor,
 //                   size: 24,
 // //                    style: TextStyle(
@@ -129,7 +129,7 @@
 //         mainAxisAlignment: MainAxisAlignment.start,
 //         mainAxisSize: MainAxisSize.max,
 //         children: <Widget>[
-//           XText("Week Summary",
+//           Text("Week Summary",
 //             color: ThemeFactory.instance.getTheme().themeData.primaryColor,
 //             size: 24,
 // //                    style: TextStyle(

@@ -1,9 +1,5 @@
-import '../themes/theme_factory.dart';
-import '../widgets/x_appbar.dart';
-import '../widgets/x_text.dart';
 import 'package:flutter/material.dart';
 
-import 'x_icon_button.dart';
 
 class XSilverAppBarSolid extends StatelessWidget {
   @override
@@ -36,7 +32,7 @@ class XSliverAppBarSolid extends XAppBar{
     iconTheme: iconTheme ?? IconThemeData(
       color: ThemeFactory.instance.getTheme().secondary
     ),
-    title: title ?? XText(
+    title: title ?? Text(
       titleText,
 //      color: ThemeFactory.instance.getTheme().secondary,
       color: Colors.white,
